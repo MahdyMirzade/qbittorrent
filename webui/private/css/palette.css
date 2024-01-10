@@ -1,0 +1,49 @@
+/* Adaptive color palette */
+
+/* Default rules */
+* {
+    --color-accent-blue: hsl(191deg, 97%, 77%);
+    --color-text-blue: hsl(191deg, 97%, 77%);
+    --color-text-orange: HSL(31deg, 100%, 71%);
+    --color-text-red: hsl(0deg, 100%, 67%);
+    --color-text-green: hsl(135deg, 94%, 65%);
+    --color-text-white: hsl(60deg, 30%, 96%);
+    --color-text-disabled: hsl(225deg, 27%, 51%);
+    --color-text-default: hsl(60deg, 30%, 96%);
+    --color-background-blue: hsl(191deg, 97%, 77%);
+    --color-background-popup: hsl(231deg, 15%, 18%);
+    --color-background-default: hsl(231deg, 15%, 18%);
+    --color-background-hover: hsl(232deg, 14%, 31%);
+    --color-border-blue: hsl(191deg, 97%, 77%);
+    --color-border-default: hsl(0deg 0% 85%);
+}
+
+:root {
+    color-scheme: light dark;
+}
+
+/* Light corrections */
+@media (prefers-color-scheme: light) {
+    :root {
+        color-scheme: light;
+    }
+}
+
+/* Dark corrections */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+
+    * {
+        --color-accent-blue: hsl(191deg, 97%, 77%);
+        --color-text-blue: hsl(191deg, 97%, 77%);
+        --color-text-orange: HSL(31deg, 100%, 71%);
+        --color-text-default: hsl(60deg, 30%, 96%);
+        --color-background-blue: hsl(191deg, 97%, 77%);
+        --color-background-popup: hsl(231deg, 15%, 18%);
+        --color-background-default: hsl(0deg 0% 25%);
+        --color-background-hover: hsl(232deg, 14%, 31%);
+        --color-border-default: hsl(0deg 0% 85%);
+    }
+}
